@@ -13,13 +13,11 @@ import shutil
 
 from config import BOT_TOKEN, HOMEWORK_FILE, HOMEWORK_TIMESTAMP, get_admins
 
-session = AiohttpSession(proxy='http://proxy.server:3128')  # прокси для pythonanywhere
-
 # --- Настройка логирования ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(message)s')
 
 # --- Инициализация бота ---
-bot = Bot(token=BOT_TOKEN, session=session)
+bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 # --- FSM ---
